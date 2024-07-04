@@ -1,0 +1,158 @@
+
+
+body{
+    box-sizing: border-box;
+    font-family:"sans-serif";
+    margin: 0;
+   
+}
+
+.container
+{
+    background-color: #ECF2F7;
+}
+
+.articles
+{
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-rows: minmax(200px,auto) ;
+
+   
+    padding: 5%;
+    gap: 15px;
+}
+
+
+ @media (max-width:991px)
+{
+
+    .articles{
+
+        grid-template-columns: minmax(150px,auto);
+        grid-template-rows:repeat(auto,auto) ;
+
+    }
+
+    .article-1 , .article-2 ,.article-3 ,.article-4  ,.article-5
+    {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+} 
+
+
+.article
+{
+    color: white;
+    border: 20px solid transparent;
+    border-radius: 18px;
+}
+
+.article-1
+{
+    grid-column: 1/3;
+    grid-row: 1/2; 
+    background-color: rgb(115, 63, 200);
+}
+
+.article .article_person
+{
+
+  display: grid;
+  grid-template-columns: auto  1fr;
+  column-gap: 3%;
+
+}
+
+
+.article .article_person .image img 
+{
+   border-radius: 50%;
+}
+
+.image.purple
+{
+    border-radius: 50%;
+    border: 2px solid rgb(167, 117, 242);
+
+}
+
+.article .article_person .name
+{
+    display: inline-block;
+ 
+}
+
+.article .article_person .name h3{
+    margin: 0;
+    font-weight: normal;
+}
+
+.article .article_person .name h5{
+    
+    margin: 5px;
+    font-size: 17px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.article-1 .article_person .name h5
+{
+    
+    color: rgb(167, 117, 242) ;
+}
+.article-1 .main_article
+{
+    color: rgb(167, 117, 242) ;
+}
+
+.article-2
+{
+    background-color: #49556B;
+    grid-column: 3/4;
+    grid-row: 1/2; 
+}
+
+
+.article-2 .article_person .name h5 ,.article-5 .article_person .name h5 ,
+.article-2 .main_article , .article-5 .main_article
+{
+    
+    color: #ABB1C0 ;
+}
+
+.article-3
+{
+    background-color: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+.article-4
+{
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.article-5
+{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color: #49556B;
+
+}
+
+ .article-3 .article_title , .article-3 h3  , .article-4 .article_title , .article-4 h3  
+{
+  color: #4A546D ;
+  
+}
+
+.article-3 h5 , .article-3 .main_article ,.article-4 h5 , .article-4 .main_article
+{
+    color: #B0B3B8;
+}
+
